@@ -3,12 +3,14 @@
 #include <string.h>
 #include <time.h>
 
+// definir struct
 struct Territorio {
     char nome[30];
     char cor[20];
     int tropas;
 };
 
+// cadastro dos territorios
 void cadastrarTerritorios(struct Territorio *territorios, int n) {
     int i;
     printf("=== SISTEMA DE CADASTRO DE TERRITORIOS ===\n\n");
@@ -92,6 +94,7 @@ int main() {
         if (!atacar(territorios, n)) break;
         printf("--- FASE DE ATAQUE --\n");
     }
+    // encerrar e liberar memoria
     printf("Jogo encerrado e memoria liberada.\nAte a proxima!\n");
     free(territorios);
     return 0;
